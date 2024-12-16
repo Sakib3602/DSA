@@ -17,7 +17,7 @@ int main()
         if (A[i] == A[i - 1])
         {
 
-            flag++;
+            flag++; 
             break;
         }
     }
