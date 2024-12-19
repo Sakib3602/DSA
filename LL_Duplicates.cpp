@@ -12,21 +12,20 @@ public:
         this->next = NULL;
     }
 };
-
 void insert_at_tail(Node *&head, Node *&tail, int val)
 {
-    Node *newBaby = new Node(val);
+    Node *newHoney = new Node(val);
     if (head == NULL)
     {
-        head = newBaby;
-        tail = newBaby;
+        head = newHoney;
+        tail = newHoney;
         return;
     }
 
-    tail->next = newBaby;
-    tail = newBaby;
+    tail->next = newHoney;
+    tail = newHoney;
 }
-void print_link(Node *&head)
+void print(Node *&head)
 {
 
     Node *temp = head;
@@ -34,20 +33,17 @@ void print_link(Node *&head)
     while (temp != NULL)
     {
         count++;
-        cout << temp->val << " ";
+
         temp = temp->next;
     }
-
-    cout << endl;
-
-    cout << "SIZE IS : " << count << endl;
+   
 }
 int main()
 {
     Node *head = NULL;
     Node *tail = NULL;
-    int val;
 
+    int val;
     while (true)
     {
         cin >> val;
@@ -55,11 +51,10 @@ int main()
         {
             break;
         }
-
         insert_at_tail(head, tail, val);
     }
 
-    print_link(head);
+    print(head);
 
     return 0;
 }
