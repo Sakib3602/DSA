@@ -22,8 +22,14 @@ int main()
     a->next = b;
     b->next = c;
 
-   Node* head = a;
+   Node* head = a;  
 
+    while (head != NULL)
+    {
+        cout << head->val <<endl;
+        head = head->next;
+    }
+    head = a;
     while (head != NULL)
     {
         cout << head->val <<endl;
