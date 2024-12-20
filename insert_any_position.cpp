@@ -46,14 +46,16 @@ void insert_at_any(Node *&head, Node *&tail, int indx, int val)
     temp->next = newBaby;
 }
 
-void print(Node* head){
-    Node* temp = head;
+
+
+void print(Node *head)
+{
+    Node *temp = head;
     while (temp != NULL)
     {
         cout << temp->val << " ";
         temp = temp->next;
     }
-    
 }
 
 int main()
