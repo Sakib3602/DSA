@@ -30,7 +30,7 @@ void delete_at_any(Node *&head,int idx)
     
 }
 void print(Node *head)
-{
+{.
     Node *temp = head;
     while (temp != NULL)
     {
