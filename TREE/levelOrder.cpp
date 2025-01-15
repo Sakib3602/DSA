@@ -14,22 +14,25 @@ public:
         this->right = NULL;
     }
 };
-void Level_order(Node *root)
+
+void Level_order(Node* root)
 {
-    queue<Node *> q;
+    queue<Node*>q;
     q.push(root);
+
     while (!q.empty())
     {
-        Node *f = q.front();
+        Node* f = q.front();
         q.pop();
-
         cout << f->val << " ";
 
-        if (f->left != NULL)
+        if(f->left != NULL)
             q.push(f->left);
-        if (f->right != NULL)
+        if(f->right != NULL)
             q.push(f->right);
+
     }
+    
 }
 int main()
 {
